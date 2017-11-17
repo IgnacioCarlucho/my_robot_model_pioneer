@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://bookshelf</uri>
+      <name>bookshelf</name>
+      <pose>-4.0 .0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bookshelf</uri>
+      <name>bookshelf</name>
+      <pose>4.0 0 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://grey_wall</uri>
+      <name>grey_wall</name>
+      <pose>.0 4.0 0 0 0 0</pose>
+    </include>
+    <!--include>
+      <uri>model://pioneer3at</uri>
+      <name>pioneer2</name>
+      <pose>-2.0 7.0 0 0 0 0</pose>
+    </include-->
+  </world>
+</sdf>
