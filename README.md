@@ -1,4 +1,4 @@
-# 
+# My robot model Pionner
 
 This repo is intended to work as a tutorial for starting to work with ros + gazebo. 
 It has a launch file with the pionner model working with lidar in world scenario.  
