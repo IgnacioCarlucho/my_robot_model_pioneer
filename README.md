@@ -50,9 +50,29 @@ rostopic list
 ```
 we can see the rosaria topics and the sonars. If you wanna change the topics names or modify parameters of the configuration, that can be done in the urdf file. 
 
-
-
-Pionner model is a urdf file. It is automatically generated from a xacro file 
+Pionner model is a urdf file. It is automatically generated from a xacro file. If you modify the xacro then you have to generate the urdf by doing:   
 ```
 rosrun xacro xacro --inorder -o model.urdf model.urdf.xacro
 ```
+### Plotting: 
+
+You can send velocity commands by doing: 
+```
+rostopic pub /sim_p3at/cmd_vel geometry_msgs/Twist '[0.1, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+```
+There is also an amazing tool for real time plotting, rqt plot, to plot for instance the velocity of the robot: 
+```
+rqt_plot /sim_p3at/odom/twist/twist/linear/x:y:z
+```
+while the velocity is: 
+```
+rqt_plot /sim_p3at/odom/pose/pose/position/x:y:z
+```
+There is another plotting tool, Rviz, that allows you to see the laser points in real time. 
+transform the laser: 
+
+run rviz: 
+
+
+how to subscribe and publish on python??? 
+also on the talk you should explain how to modify the model. ( maybe show uwsim)
