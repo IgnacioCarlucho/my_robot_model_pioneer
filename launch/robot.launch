@@ -1,7 +1,7 @@
 <launch>
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find myrobot_gazebo)/worlds/myrobot.world"/>
+    <arg name="world_name" value="$(find my_robot_model_pioneer)/worlds/myrobot.world"/>
     <!-- more default parameters can be changed here -->
   </include>
   
@@ -9,7 +9,7 @@
   <!-- Spawn a robot into Gazebo -->
   <!--node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find baxter_description)/urdf/baxter.urdf -urdf -z 1 -model baxter" /-->
   <!--node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find amr_robots_description)/urdf/pioneer3at_v3.urdf -urdf -z 1 -model pioneer" /-->
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find myrobot_gazebo)/model/pioneer3at_v3.urdf -urdf -z 1 -model pioneer" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find my_robot_model_pioneer)/model/pioneer3at_v3.urdf -urdf -z 1 -model pioneer" />
   
 
   <!--

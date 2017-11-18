@@ -156,7 +156,7 @@ name="pioneer3at">
 	      <origin xyz="0 0 0" rpy="0 0 0"/>
 	      <geometry>
 	        <mesh filename="package://rrbot_description/meshes/hokuyo.dae"/>
-	      </geometry>
+	       </geometry>
 	    </visual>
 
 	    <inertial>

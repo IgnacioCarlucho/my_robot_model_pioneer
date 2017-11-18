@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>myrobot_gazebo</name>
+  <name>my_robot_model_pioneer</name>
   <version>0.0.0</version>
   <description>The myrobot_gazebo package</description>
 
