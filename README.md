@@ -1,14 +1,27 @@
+
+
 # My robot model Pionner
 
+## Overview
+
 This repo is intended to work as a tutorial for starting to work with ros + gazebo. 
-It has a launch file with the pionner model working with lidar in world scenario.  
+It has a launch file with the pionner model working with ledar in world scenario.  
 
 
 ## Requiremets 
 
 - ros & gazebo 
+- amr-robot models [link](https://github.com/MobileRobots/amr-ros-config)
+- baxter demos [link](https://github.com/ros-simulation/gazebo_ros_demos)
+- May need to do: 
+```
+sudo apt-get install ros-indigo-ros-control ros-indigo-ros-controllers
+```
+- if you don't have the models downloaded, you can get them from [here](http://models.gazebosim.org/)
 
 ## Tutorial
+
+### Set workspace 
 
 Create catkin workspace 
 ```
@@ -23,7 +36,7 @@ Clone this repo & amr robots & gazebo ros demo:
 cd ~/pioneer_sim/src/
 git clone https://github.com/IgnacioCarlucho/my_robot_model_pioneer
 git clone https://github.com/MobileRobots/amr-ros-config
-https://github.com/ros-simulation/gazebo_ros_demos
+git clone https://github.com/ros-simulation/gazebo_ros_demos
 ```
 amr-robots has the pionner model, meshes, etc. while ros demo has the mesh used for lidar and the cameras. 
 
@@ -35,7 +48,7 @@ catkin_make
 source devel/setup.bash
 ```
 
-## explanation 
+### How to run
 
 to run we need to do: 
 ```
@@ -54,7 +67,12 @@ Pionner model is a urdf file. It is automatically generated from a xacro file. I
 ```
 rosrun xacro xacro --inorder -o model.urdf model.urdf.xacro
 ```
-### Plotting: 
+
+![alt text](https://github.com/IgnacioCarlucho/LOS_control_Ictiobot/blob/master/screen.png)
+
+
+
+### Visualizing variables: 
 
 You can send velocity commands by doing: 
 ```
@@ -69,10 +87,15 @@ while the velocity is:
 rqt_plot /sim_p3at/odom/pose/pose/position/x:y:z
 ```
 There is another plotting tool, Rviz, that allows you to see the laser points in real time. 
-transform the laser: 
+First you need to transform the laser reference frame:   
+```
+rosrun tf static_transform_publisher 0.0 0.0 0.0 0.0 0.0 0.0 map laser_frame 100
+```
 
 run rviz: 
-
+```
+rosrun rviz rviz
+```
 
 how to subscribe and publish on python??? 
 also on the talk you should explain how to modify the model. ( maybe show uwsim)
