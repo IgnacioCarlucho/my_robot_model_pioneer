@@ -96,6 +96,3 @@ run rviz:
 ```
 rosrun rviz rviz
 ```
-
-how to subscribe and publish on python??? 
-also on the talk you should explain how to modify the model. ( maybe show uwsim)
