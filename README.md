@@ -68,7 +68,7 @@ Pionner model is a urdf file. It is automatically generated from a xacro file. I
 rosrun xacro xacro --inorder -o model.urdf model.urdf.xacro
 ```
 
-![alt text](https://github.com/IgnacioCarlucho/LOS_control_Ictiobot/blob/master/screen.png)
+![alt text](https://github.com/IgnacioCarlucho/my_robot_model_pioneer/blob/master/screen.png)
 
 
 
